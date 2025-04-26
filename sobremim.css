@@ -1,0 +1,150 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Travar Scroll */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff2800 0%, #000000 100%);
+    color: white;
+}
+
+/* Header */
+header {
+    background: black;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    /* Opcional: Para espaçar o logo/título do menu */
+    justify-content: space-between;
+    padding: 0 30px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Esta regra AGORA vai funcionar corretamente */
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* <<< Certifique-se que este é o valor desejado */
+}
+
+.logo {
+    height: 50px;
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffc400;
+}
+
+.cabecalho__menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    /* margin-left: auto;  Pode não ser mais necessário com justify-content no header */
+}
+
+.cabecalho__menu__link {
+    background-color: #ffc400;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+}
+
+.cabecalho__menu__link:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Main */
+.apresentacao {
+    height: calc(100% - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.apresentacao__conteudo {
+    width: 60%;
+    background-color: black;
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.apresentacao__titulo {
+    font-size: 36px;
+    font-family: 'Orbitron', sans-serif;
+    color: #ffc400;
+}
+
+.apresentacao__paragrafo {
+    font-size: 18px;
+    color: #ccc;
+    line-height: 1.5;
+    font-family: 'Arial', sans-serif;
+}
+
+.apresentacao__paragrafo__destaque {
+    color: #ffc400;
+}
+
+.apresentacao__conteudo__cursos {
+    font-size: 28px;
+    font-family: 'Orbitron', sans-serif;
+    color: #ffc400;
+    margin-top: 20px;
+}
+
+/* Links de Cursos */
+.apresentacao__conteudo__cursos__links {
+    color: #ffc400;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.apresentacao__conteudo__cursos__links:hover {
+    text-decoration: underline;
+}
+
+/* Imagem */
+.apresentacao img {
+    width: 30%;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-left: 30px;
+}
+
+/* Footer */
+.rodape {
+    background-color: #e4b724;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
